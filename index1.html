@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Playground</title>
+
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* --- Navbar Styles --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4b6584;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #778ca3;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #4b6584;
+            text-decoration: underline;
+        }
+
+        /* --- Main Content (Cards) Styles --- */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 60px 40px;
+            flex-wrap: wrap;
+            /* Allows cards to wrap on smaller screens */
+        }
+
+        .card {
+            border: 2px solid #d1d8e0;
+            border-radius: 8px;
+            padding: 40px 20px;
+            width: 200px;
+            text-align: center;
+            background-color: #fcfcfc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect to make it feel interactive */
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border-color: #4b6584;
+            background-color: #ffffff;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            color: #4b6584;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            color: #a5b1c2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <nav class="navbar">
+        <div class="logo">Pixel Playground</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Editor</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Cards -->
+    <main class="card-container">
+        <!-- Card 1 -->
+        <div class="card" onclick="openFeature('Crop & Resize')">
+            <h3>Crop & Resize</h3>
+            <p>Card 1</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="openFeature('Filters')">
+            <h3>Filters</h3>
+            <p>Card 2</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="openFeature('Layers')">
+            <h3>Layers</h3>
+            <p>Card 3</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" onclick="openFeature('Export')">
+            <h3>Export</h3>
+            <p>Card 4</p>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Simple function to demonstrate interactivity when a card is clicked
+        function openFeature(featureName) {
+            alert("Loading the " + featureName + " tool...");
+            console.log("User clicked on: " + featureName);
+        }
+    </script>
+
+</body>
+
+</html>
